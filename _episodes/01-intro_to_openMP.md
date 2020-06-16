@@ -14,9 +14,13 @@ keypoints:
 
 Parallel programs come in two broad flavors: shared-memory and message-passing. In this workshop, we will be looking at shared-memory programming, with a focus on Open Multi-Processing (OpenMP) programming.
 
-## What is shared-memory programming?
+## What is shared-memory programming and OpenMP?
 
-OpenMP is one way of writing shared-memory parallel programs. OpenMP is actually a specification, which has been implemented by many vendors.
+OpenMP is one way of writing shared-memory parallel programs.
+
+In a shared-memory program communication between parallel processes happens through the use of global variables stored in the global memory of the local machine.
+
+OpenMP is actually a specification, which has been implemented by many vendors.
 
 [OpenMP specifications](https://www.openmp.org/specifications/)
 
