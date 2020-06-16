@@ -84,6 +84,7 @@ export OMP_NUM_THREADS=3
 > ## OpenMP with Slurm
 > When you wish to submit an OpenMP job to the job scheduler Slurm, you can use the following boilerplate.
 > ~~~
+> #!/bin/bash
 > #SBATCH --account=sponsor0
 > #SBATCH --time=0:01:0
 > #SBATCH --cpus-per-task=3
