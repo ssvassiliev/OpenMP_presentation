@@ -142,5 +142,4 @@ The OpenMP reduction clause lets you specify thread-private variables that are s
 > > ## Solution
 > > `#pragma omp parallel for reduction(+:total)`
 >  {: .solution}
-
 {: .challenge}
