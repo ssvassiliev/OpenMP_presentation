@@ -78,7 +78,7 @@ For an overview of the past, present and future of the OpenMP read the paper ["T
   - The `#include` directive tells the preprocessor to insert the contents of another file into the source code.
     ~~~
     #include <header_file> // Search in a predefined folders
-    #include "header_file>" // Search in the current directory
+    #include "header_file" // Search in the current directory
     ~~~
     {: .source}
 

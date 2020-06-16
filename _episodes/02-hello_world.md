@@ -119,7 +119,7 @@ export OMP_NUM_THREADS=3
 > ## Downloading and Unpacking the Code.
 > If you have not yet done so, download and unpack the code:
 > ~~~
-> cd Desktop
+> cd scratch
 > wget https://github.com/ssvassiliev/Summer_School_OpenMP/raw/master/code/omp.tar.gz
 > tar -xf omp.tar.gz
 > cd code

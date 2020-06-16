@@ -238,7 +238,7 @@ There's a wikipedia page on data depencies: <https://en.wikipedia.org/wiki/Data_
 >     a[i] = a[i] + a[i+N/2]; }
 >
 > /* loop #3 */
-> for ( i=1; i<N/2+1; i=i+1 ) {
+> for ( i=0; i<N/2+1; i=i+1 ) {
 >     a[i] = a[i] + a[i+N/2]; }
 >
 > /* loop #4 */
@@ -250,10 +250,17 @@ There's a wikipedia page on data depencies: <https://en.wikipedia.org/wiki/Data_
 > > ## Solution
 > >
 > > Loop #1 does not.
+> > The increment of this loop is 2, so in the step a[2]=a[2]+a[1]. In the next iterration we compute a[4]=a[4]+a[3] ... etc.
 > >
 > > Loop #2 does not.
+> > In this range of i values each thread modifies only one element of array a.
 > >
 > > Loop #3 does.
+> > Here the last iterration creates data dependency writing to a[N/2]:
+> >
+> > a[N/2] = a[N/2] + a[N]
+> >
+> > a[0] = a[0] + a[N/2]
 > >
 > > Loop #4 might or might not, depending on the contents of array `idx`.
 > > If any two entries of `idx` are the same, then there's a dependency.
