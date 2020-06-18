@@ -158,7 +158,7 @@ int main(int argc, char **argv) {
 {: .callout}
 
 > ## Thread ordering
-> Try running the program a few times.
+> Compile the program and try running it a few times.
 > - What order do the threads write out their messages in?
 > - What's going on?
 >
