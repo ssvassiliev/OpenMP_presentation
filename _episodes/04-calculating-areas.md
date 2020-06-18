@@ -130,6 +130,16 @@ The `critical` directive is a very general construct that lets you ensure a code
 >  {: .solution}
 {: .challenge}
 
+### Another way to avoid race conditions
+The *omp atomic* directive allows access to a specific variable avoiding race condition by controlling concurrent threads that might access the specific memory location directly. This allows to write more efficient code with less locks.
+
+~~~
+#pragma omp atomic
+x[i] += y
+~~~
+
+Atomic clauses: update (defaults), write, read, capture.
+
 
 - OpenMP provides a specific thread-safe mechanism to compute a sum: *Reduction clause*.
 The OpenMP reduction clause lets you specify thread-private variables that are subject to a reduction operation at the end of the parallel region.
